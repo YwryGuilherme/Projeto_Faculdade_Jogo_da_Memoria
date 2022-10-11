@@ -1,6 +1,7 @@
 const grid = document.querySelector('.grid');
 const spanPlayer = document.querySelector('.player');
 const timer = document.querySelector('.timer');
+const refresh = document.querySelector('.refresh');
 
 const characters = [
     'Cat 6A - Vermelho',
@@ -15,11 +16,17 @@ const characters = [
     'Teste_Lan',
 ];
 
+refresh.addEventListener('click', () => {
+    location.reload();
+})
+
 const createElement = (tag, className) => {
     const element = document.createElement(tag);
     element.className = className;
     return element;
 }
+
+
 
 let firstCard = '';
 let secondCard = '';
